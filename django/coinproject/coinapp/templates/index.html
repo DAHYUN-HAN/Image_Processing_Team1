@@ -1,0 +1,209 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Grayscale - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href='{% static "coinapp/vendor/bootstrap/css/bootstrap.min.css"%}' rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href='{% static "coinapp/vendor/fontawesome-free/css/all.min.css"%}' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href='{% static "coinapp/css/grayscale.css"%}' rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">동전을 사진으로 찍어보세요.<br>저희가 얼마인지 알려드릴게요!</h2>
+          <p class="text-white-50"><br>A4용지에 동전을 올려놓고 사진을 찍으시면 총 얼마인지 계산해드립니다.</p>
+        </div>
+      </div>
+      <img src='{% static "coinapp/img/ipad.png"%}' class="img-fluid" alt="">
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+  <div class="row center">
+
+        <div class="col-md-6 mb-6 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">사진 올리기</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+              
+            <form enctype='multipart/form-data' method="POST">
+            {% csrf_token %}
+                <br>
+            <input type="file" name="file" multiple>
+            <input type="submit" class="btn btn-dark" value="submit">
+              </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </section>
+
+  <!-- Signup Section -->
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section bg-black">
+    <div class="container">
+
+      <div class="row">
+       
+        <div class="col-md-2 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-address-book text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Info</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">Image Processing Team1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-user text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">HYEWON<br>KANG</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">kanghye98@<br>gmail.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-user text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">YESEUL<br>KIM</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">tmf8650@<br>gmail.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-user text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">JIYEON<br>KIM</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">wer2956@<br>gmail.com</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-2 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-user text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">YOONBEE<br>JEONG</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">dnflsms756@<br>bme.gachon.ac.kr</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-2 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-user text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">DAHYUN<br>HAN</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">gksekgus1268@<br>gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+    </div>
+  </footer>
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src='{% static "coinapp/vendor/jquery/jquery.min.js"%}'></script>
+  <script src='{% static "coinapp/vendor/bootstrap/js/bootstrap.bundle.min.js"%}'></script>
+
+  <!-- Plugin JavaScript -->
+  <script src='{% static "coinapp/vendor/jquery-easing/jquery.easing.min.js"%}'></script>
+
+  <!-- Custom scripts for this template -->
+  <script src='{% static "coinapp/js/grayscale.min.js"%}'></script>
+
+</body>
+
+</html>
