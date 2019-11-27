@@ -70,7 +70,7 @@
           <p class="text-white-50"><br>A4용지에 동전을 올려놓고 사진을 찍으시면 총 얼마인지 계산해드립니다.</p>
         </div>
       </div>
-      <img src='{% static "coinapp/img/ipad.png"%}' class="img-fluid" alt="">
+      <img src='{% static "coinapp/img/coin.png"%}' class="img-fluid" alt="">
     </div>
   </section>
 
@@ -82,7 +82,7 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-camera text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">원본 사진</h4>
+              <h4 class="text-uppercase m-0">User Input</h4>
               <hr class="my-4">
               <div class="small text-black-50">
               {% for pic in image.pic_set.all%}
@@ -97,7 +97,7 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-file-image text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">동전 검출</h4>
+              <h4 class="text-uppercase m-0">Position</h4>
               <hr class="my-4">
               <div class="small text-black-50">
               <img src='{% static "coinapp/result/images/cimg.jpg"%}' width="300"alt="picture">
@@ -110,15 +110,15 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-coins text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">결과</h4>
+              <h4 class="text-uppercase m-0">Result</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-              <br><br>
-      <p>500원: {{fivehund}}개</p>
-      <p>100원: {{onehund}}개</p>
-      <p>50원: {{fifty}}개</p>
-      <p>10원: {{ten}}개</p>
-      <p>동전 총합: {{total}}원</p>
+      <p>￦500: {{fivehund}}</p>
+      <p>￦100: {{onehund}}</p>
+      <p>￦50: {{fifty}}</p>
+      <p>￦10: {{ten}}</p>
+      <h3>How much is it?</h3>
+      <h1>￦{{total}}</h1>
               </div>
             </div>
           </div>

@@ -201,6 +201,9 @@
     width: 30%;
   }
 }
+#thick{
+    font-weight: bolder;
+}
 
 .signup-section {
   padding: 10rem 0;
