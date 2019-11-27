@@ -25,4 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', coinapp.views.index, name="index"),
     path('imagelist/', coinapp.views.imagelist, name="imagelist"),
+    path('totallist/', coinapp.views.totallist, name="totallist"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

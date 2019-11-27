@@ -55,6 +55,7 @@ def imagelist(request):
         url = pic.image.url
         img = cv2.imread(url[1:])
         img_ori = img.copy()
+        cv2.imwrite('coinapp/static/coinapp/result/images/img_ori.jpg', img_ori)
         img_gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
         cv2.imwrite('coinapp/static/coinapp/result/images/img_gray.jpg', img_gray)
         # Blurring
@@ -186,3 +187,6 @@ def imagelist(request):
         total = (500 * fivehund + 100 * onehund + 50 * fifty + 10 * ten)
         
     return render(request, 'imagelist.html', {'image':image, 'fivehund':fivehund, 'onehund':onehund, 'fifty':fifty, 'ten':ten, 'total':total})
+
+def totallist(request):
+    return render(request, 'totallist.html')

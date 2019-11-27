@@ -85,9 +85,59 @@
               <h4 class="text-uppercase m-0">원본 사진</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-              {% for pic in image.pic_set.all%}
-                <img src="{{pic.image.url}}" width="300"alt="picture">
-            {% endfor %}
+              <img src='{% static "coinapp/result/images/img_ori.jpg"%}' width="300"alt="picture">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-file-image text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Blurring</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+              <img src='{% static "coinapp/result/images/dst2.jpg"%}' width="300"alt="picture">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-file-image text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">adaptiveThreshold</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+              <img src='{% static "coinapp/result/images/binary_img.jpg"%}' width="300"alt="picture">
+              
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-file-image text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">drawContours</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+              <img src='{% static "coinapp/result/images/drawContoursimg.jpg"%}' width="300"alt="picture">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-file-image text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">warpPerspective</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+              <img src='{% static "coinapp/result/images/warpPerspectiveimg.jpg"%}' width="300"alt="picture">
               </div>
             </div>
           </div>
@@ -105,29 +155,10 @@
             </div>
           </div>
         </div>
-        
-        <div class="col-md-4 mb-4 mb-md-0">
-          <div class="card py-4 h-100">
-            <div class="card-body text-center">
-              <i class="fas fa-coins text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">결과</h4>
-              <hr class="my-4">
-              <div class="small text-black-50">
-              <br><br>
-      <p>500원: {{fivehund}}개</p>
-      <p>100원: {{onehund}}개</p>
-      <p>50원: {{fifty}}개</p>
-      <p>10원: {{ten}}개</p>
-      <p>동전 총합: {{total}}원</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="center2">
          <br>
           <a href="/#projects" class="btn btn-dark">다시하기</a>
-          <a href="../totallist/#projects" class="btn btn-dark">중간과정보기</a>
       </div>
   </section>
 
